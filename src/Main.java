@@ -16,19 +16,19 @@ public class Main {
 6. Создать массив котов и одну тарелку с едой, попросить всех котов покушать из этой тарелки и потом вывести информацию
 * о сытости котов в консоль;
 7. Когда еда в тарелке кончается, нужно оповещать об этом и наполнять её едой.*/
-        Cat[] cat = new Cat[5]; //создаем 5 котов
+        Cat[] cat = new Cat[5]; //создаем 5 котов (имя/размер аппетита/статус голоден)
         cat[0] = new Cat("Вася",10,false);
         cat[1] = new Cat("Гоша",12,false);
         cat[2] = new Cat("Чарли",11,false);
         cat[3] = new Cat("Муфик",9,false);
         cat[4] = new Cat("Зевс",13,false);
         Plate[] plate = new Plate[5]; //создаем 5 мисок для каждого кота разным объемом и разным количеством еды
-        plate[0] = new Plate(25,25);
+        plate[0] = new Plate(25,25);// (еды кладем в тарелку / объем тарелки)
         plate[1] = new Plate(25,25);
         plate[2] = new Plate(25,25);
         plate[3] = new Plate(25,25);
         plate[4] = new Plate(12,25);
-        Plate obshPlate = new Plate(30,30); //создаем общую миску для всех котов с едой 50 и объемом 50
+        Plate obshPlate = new Plate(30,30); //создаем общую миску для всех котов с едой 30 и объемом 30
         for (int i = 0; i < cat.length; i++){
             System.out.printf("Кот %s ",cat[i].getName());
             cat[i].eat(plate[i]);

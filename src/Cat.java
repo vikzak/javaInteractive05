@@ -34,11 +34,11 @@ public class Cat {
     public void setAppetite(int appetite) {
         this.appetite = appetite;
     }
-    public void eat(Plate plate1) {
-        if (appetite <= plate1.getFood()) {
+    public void eat(Plate plate1) { //кот кушает из терелки
+        if (appetite <= plate1.getFood()) { //проверка величины аппетита и объема еды в миске
             setIsfull(true);
         } else {setIsfull(false);}
-        plate1.decreaseFood(appetite);
+        plate1.decreaseFood(appetite); // смотрим остаток еды
     }
 
 }
